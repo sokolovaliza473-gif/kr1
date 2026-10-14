@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Формы обратной связи и заказа</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <p>
+                <a href="index.html" style="text-decoration: none;"><img src="images/logo.png" alt="На главную" width="60" height="30" border="0" style="vertical-align: middle;"></a>
+                <a href="index.html">Главная</a> |
+                <a href="gallery.html">Галерея плакатов</a> |
+                <b>[ Контакты и Заказ ]</b> |
+                <!-- Ссылка на внутренний фрагмент (якорь) -->
+                <a href="index.html#styles">К стилям плакатов</a> |
+                <!-- Внешняя ссылка в новом окне -->
+                <a href="https://www.bauhaus.de" target="_blank" rel="noopener">Музей Баухаус (внешний)</a> |
+                <a href="dom_read.html">DOM: Чтение</a> |
+                <a href="dom_change.html">DOM: Изменение</a> |
+                <a href="task.html">Алгоритмическая задача</a>
+            </p>
+        </nav>
+        <hr>
+    </header>
+
+    <!-- ФОРМА 1: Личные контактные данные -->
+    <h2>1. Отправка контактных данных студента</h2>
+    <form action="https://httpbin.org/post" method="POST">
+        <p>Фамилия: <input type="text" name="last_name" value="Иванов" required></p>
+        <p>Имя: <input type="text" name="first_name" value="Иван" required></p>
+        <p>Группа: <input type="text" name="group_number" value="Б25ДЗ02" required></p>
+        <p>Мобильный телефон: <input type="tel" name="phone" value="+79990001122" required></p>
+        <p>Электронная почта: <input type="email" name="email" value="student@hse.ru" required></p>
+        <p>Дата отправки сообщения: <input type="date" name="send_date" value="2026-10-14" required></p>
+        <p><input type="submit" value="Отправить контакты"></p>
+    </form>
+
+    <hr>
+
+    <!-- ФОРМА 2: Заказ плаката со всеми требуемыми типами полей -->
+    <h2>2. Оформление заказа дизайнерского плаката</h2>
+    <form action="https://httpbin.org/post" method="POST">
+        <!-- Скрытое поле (hidden) -->
+        <input type="hidden" name="order_source" value="poster_catalog_v1">
+
+        <!-- Текстовое поле (text) со значением по умолчанию -->
+        <p>Название постера или артикул: 
+            <input type="text" name="poster_title" value="Bauhaus Exhibition 1923" required>
+        </p>
+
+        <!-- Числовое поле (number) со значением по умолчанию -->
+        <p>Количество копий: 
+            <input type="number" name="quantity" min="1" max="50" value="1" required>
+        </p>
+
+        <!-- Радиокнопки (radio) со значением по умолчанию -->
+        <p>Формат печати:
+            <label><input type="radio" name="format" value="A3" checked> Формат A3</label>
+            <label><input type="radio" name="format" value="A2"> Формат A2</label>
+            <label><input type="radio" name="format" value="A1"> Формат A1</label>
+        </p>
+
+        <!-- Флажки (checkbox) со значением по умолчанию -->
+        <p>Дополнительные опции:
+            <label><input type="checkbox" name="frame" value="wood_frame" checked> Деревянная рама</label>
+            <label><input type="checkbox" name="matting" value="yes"> Паспарту</label>
+        </p>
+
+        <!-- Дата (date) -->
+        <p>Желаемая дата доставки: 
+            <input type="date" name="delivery_date" value="2026-10-20" required>
+        </p>
+
+        <!-- Пароль (password) -->
+        <p>Пин-код подтверждения заказа: 
+            <input type="password" name="client_pin" value="1234" required>
+        </p>
+
+        <p>
+            <input type="reset" value="Сбросить к значениям по умолчанию">
+            <input type="submit" value="Отправить заказ">
+        </p>
+    </form>
+</body>
+</html>

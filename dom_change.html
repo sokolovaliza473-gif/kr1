@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Меняем кириллицу на латиницу по клику</title>
+</head>
+<body id="top">
+
+    <!-- Единая навигационная панель -->
+    <header>
+        <nav>
+            <p>
+                <a href="index.html" style="text-decoration: none;"><img src="images/logo.png" alt="На главную" width="60" height="30" border="0" style="vertical-align: middle;"></a>
+                <a href="index.html">Главная</a> |
+                <a href="gallery.html">Галерея плакатов</a> |
+                <a href="feedback.html">Контакты и Заказ</a> |
+                <!-- Ссылка на внутренний фрагмент (якорь) -->
+                <a href="index.html#styles">К стилям плакатов</a> |
+                <!-- Внешняя ссылка в новом окне -->
+                <a href="https://www.bauhaus.de" target="_blank" rel="noopener">Музей Баухаус (внешний)</a> |
+                <a href="dom_read.html">DOM: Чтение</a> |
+                <!-- Текущее местоположение выделено -->
+                <b>[ DOM: Изменение ]</b> |
+                <a href="task.html">Алгоритмическая задача</a>
+            </p>
+        </nav>
+        <hr>
+    </header>
+
+    <h2>Задание 02. Меняем кириллицу на латиницу по клику</h2>
+    <p>Нажмите на кнопку ниже, чтобы перевести паспортные данные с кириллицы на латиницу</p>
+
+    <!-- Блок паспорта -->
+    <div style="border: 2px solid #555; background-color: #fcfbf7; width: 520px; padding: 20px; font-family: serif;">
+        <h3 align="center" style="margin-top: 0;" id="passport_header">РОССИЙСКАЯ ФЕДЕРАЦИЯ</h3>
+        
+        <p>Паспорт выдан: <span id="issue_authority">УМВД РОССИИ ПО ПЕНЗЕНСКОЙ ОБЛАСТИ</span></p>
+        <p>Дата выдачи: <span id="issue_date">15.10.2020</span> Код подразделения: <span>770-001</span></p>
+        <p>Фамилия: <span id="surname" style="font-weight: bold;">СОКОЛОВА</span></p>
+        <p>Имя: <span id="name" style="font-weight: bold;">ЕЛИЗАВЕТА</span></p>
+        <p>Год рождения: <span id="year" style="font-weight: bold;">2007</span></p>
+        <p>Пол: <span id="gender">ЖЕН.</span> Место рождения: <span id="birthplace">ГОР. ПЕНЗА</span></p>
+    </div>
+
+    <br>
+    <!-- Кнопка вызова JS функции -->
+    <button id="toggleBtn" onclick="translatePassport()" style="padding: 8px 16px; font-size: 14px; cursor: pointer;">
+        Перевести на латиницу
+    </button>
+
+    <!-- Подключение JS файла -->
+    <script src="passport.js"></script>
+</body>
+</html>

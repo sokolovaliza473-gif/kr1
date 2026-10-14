@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM_JS. Считываем информацию из DOM</title>
+</head>
+<body id="top">
+
+    <!-- Единая навигационная панель (обернута в div, чтобы не сбивать счет тегов <p>) -->
+    <header>
+        <nav>
+            <div style="margin: 16px 0;">
+                <a href="index.html" style="text-decoration: none;"><img src="images/logo.png" alt="На главную" width="60" height="30" border="0" style="vertical-align: middle;"></a>
+                <a href="index.html">Главная</a> |
+                <a href="gallery.html">Галерея плакатов</a> |
+                <a href="feedback.html">Контакты и Заказ</a> |
+                <!-- Ссылка на внутренний фрагмент (якорь) -->
+                <a href="index.html#styles">К стилям плакатов</a> |
+                <!-- Внешняя ссылка в новом окне -->
+                <a href="https://www.bauhaus.de" target="_blank" rel="noopener">Музей Баухаус (внешний)</a> |
+                <b>[ DOM: Чтение ]</b> |
+                <a href="dom_change.html">DOM: Изменение</a> |
+                <a href="task.html">Алгоритмическая задача</a>
+            </div>
+        </nav>
+        <hr>
+    </header>
+<h2>DOM_JS. Считываем информацию из DOM</h2>
+
+    <!-- Блок паспорта -->
+    <div style="border: 2px solid #555; background-color: #fcfbf7; width: 520px; padding: 20px; font-family: serif;">
+        <h3 align="center" style="margin-top: 0;">РОССИЙСКАЯ ФЕДЕРАЦИЯ</h3>
+        
+        <!-- Индекс [0] -->
+        <p>Паспорт выдан: <span>УМВД РОССИИ ПО ПЕНЗЕНСКОЙ ОБЛАСТИ</span></p>
+        
+        <!-- Индекс [1] -->
+        <p>Дата выдачи: <span>15.10.2020</span> Код подразделения: <span>770-001</span></p>
+        
+        <!-- Индекс [2] -->
+        <p>Фамилия: <span style="font-weight: bold;">СОКОЛОВА</span></p>
+        
+        <!-- Индекс [3] -->
+        <p>Имя: <span style="font-weight: bold;">ЕЛИЗАВЕТА</span></p>
+        
+        <!-- Индекс [4] -->
+        <p>Год рождения: <span style="font-weight: bold;">2007</span></p>
+        
+        <!-- Индекс [5] -->
+        <p>Пол: <span>ЖЕН.</span> Место рождения: <span>ГОР. ПЕНЗА</span></p>
+    </div>
+
+    <hr>
+
+    <h3>Скриншот выполнения команды в инструментах разработчика</h3>
+    <div>
+        <img src="images/screenshot_dom.png" alt="Скриншот выполнения команды в консоли" border="1" width="750">
+    </div>
+
+    <div style="margin-top: 15px;"><a href="#top">К началу страницы</a></div>
+
+</body>
+</html>

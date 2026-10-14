@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Решение алгоритмической задачи</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <p>
+                <a href="index.html" style="text-decoration: none;"><img src="images/logo.png" alt="На главную"
+                        width="60" height="30" border="0" style="vertical-align: middle;"></a>
+                <a href="index.html">Главная</a> |
+                <a href="gallery.html">Галерея плакатов</a> |
+                <a href="feedback.html">Контакты и Заказ</a> |
+                <!-- Ссылка на внутренний фрагмент (якорь) -->
+                <a href="index.html#styles">К стилям плакатов</a> |
+                <!-- Внешняя ссылка в новом окне -->
+                <a href="https://www.bauhaus.de" target="_blank" rel="noopener">Музей Баухаус (внешний)</a> |
+                <a href="dom_read.html">DOM: Чтение</a> |
+                <a href="dom_change.html">DOM: Изменение</a> |
+                <b>[ Алгоритмическая задача ]</b> |
+            </p>
+        </nav>
+        <hr>
+    </header>
+
+    <h2>Задание 03. Решение алгоритмической задачи</h2>
+
+    <!-- Точное условие задачи 1006 -->
+    <div style="background-color: #f5f5f5; border-left: 4px solid #333; padding: 12px 16px; width: 620px;">
+        <p><b>Задача №1006:</b></p>
+        <p id="task_condition">
+            Известна денежная сумма. Разменять её купюрами 500, 100, 10 и монетой 2 руб., если это возможно.
+        </p>
+    </div>
+
+    <br>
+
+    <!-- Форма для ввода суммы -->
+    <form id="calcForm">
+        <p>
+            <label for="amountInput">Введите сумму в рублях (целое число):</label><br>
+            <input type="number" id="amountInput" min="1" step="1" value="1864" style="padding: 4px; font-size: 14px;">
+        </p>
+        <p>
+            <input type="button" value="Рассчитать размен" onclick="solveTask()"
+                style="padding: 6px 14px; cursor: pointer;">
+        </p>
+    </form>
+
+    <h3>Результат размена:</h3>
+    <div id="resultText" style="font-size: 15px; line-height: 1.6; color: #1a1a1a;">
+        Введите сумму и нажмите кнопку для расчета.
+    </div>
+    <script src="task.js"></script>
+</body>
+
+</html>
